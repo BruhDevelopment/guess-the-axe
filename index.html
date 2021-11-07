@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>ВИДЕО ИГРА ГЕННАДИЯ ГОРИНА УГАДАЙ ТОПОР</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="game-header">
+                <h4 class="hint shake-horizontal">--></h4>
+                <h4>Выберите сложность</h4>
+                <h4 class="option" onclick="start(10, 2);">Легко</h4>
+                <h4 class="option" onclick="start(15, 3);">Норм</h4>
+                <h4 class="option" onclick="start(30, 5);">Бля</h4>
+                <h4 class="option hard" onclick="start(30, 9)">ДА ТЫ ЧО</h4>
+            </div>
+            <div class="game-body">
+                <div class="game-info">
+                    <div class="game-info__game-name">Видео игра: УГАДАЙ .....</div>
+                    <div class="game-info__author-info">
+                        <img src="images/author/author.jpg" class="game-info__author-info__author-photo wobble">
+                        <div class="game-info__author-info__author-name">Разработчик и художник видео игры: Геннадий Горин.</div>
+                    </div>
+                </div>
+                <div class="game-field"></div>
+                <div class="stats">
+                    <div class="stats__time-counter">
+                        <div class="stats__time-counter__countdown">0</div>
+                        <div class="stats__time-counter__counter-title">ВРЕМЯ</div>
+                    </div>
+                    <div class="stats__score-counter">
+                        <div class="stats__score-counter__score">0</div>
+                        <div class="stats__score-counter__counter-title">ОЧКИ</div>
+                    </div>
+                    <div class="stats__year">Видео игра 2021 год.</div>
+                </div>
+            </div>
+        </div>
+        <script defer src="index.js"></script>
+    </body>
+</html>

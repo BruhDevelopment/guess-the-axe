@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    color: white;
+    max-width: 500px;
+    padding-bottom: 1rem;
+}
+
+.option:hover {
+    cursor: pointer;
+    color: aqua;
+    -webkit-animation-name: light-wobble;
+    animation-name: light-wobble;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes light-wobble {
+    0% {
+    -webkit-transform: none;
+    transform: none;
+    }
+    100% {
+        transform: scale(2,1) rotate(0)skew(0,0) translate(0,0); 
+        -webkit-transform: scale(2,1) rotate(0)skew(0,0) translate(0,0); 
+        -moz-transform: scale(2,1) rotate(0)skew(0,0) translate(0,0); 
+        transform-origin: 50% 50%; 
+    }
+
+    }
+    @keyframes light-wobble {
+    0% {
+    -webkit-transform: none;
+    transform: none;
+    }
+    100% {
+        transform: scale(2,1) rotate(0)skew(0,0) translate(0,0); 
+        -webkit-transform: scale(2,1) rotate(0)skew(0,0) translate(0,0); 
+        -moz-transform: scale(2,1) rotate(0)skew(0,0) translate(0,0); 
+        transform-origin: 50% 50%; 
+    }
+}
+
+.hard:hover {
+    color: red;
+}
+
+.container {
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    padding: 5rem 0;
+    flex-direction: column;
+}
+
+.game-body {
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
+
+.game-info, .stats {
+    height: 400;
+    width: 150;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+/* @media all and (max-width: 576px) {
+    .stats {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+} */
+
+.game-info {
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.game-field {
+    display: flex;
+    justify-content: center;
+    align-content: right;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0;
+
+
+    width: 600;
+    height: 400;
+    border-width: 6px;
+    border-style: solid;
+    border-color: green;
+    background-color: #01009e;
+    /* background-image: url("https://loremflickr.com/600/400"); */
+    background-image: url("images/zombie.png");
+}
+
+.game-field__axe {
+    display: flex; 
+
+    cursor: pointer;
+    
+    max-width: 180;
+    margin-left: auto;
+    margin-top: 5%; 
+    margin-right: 2%;
+}
+
+.game-field__axe:hover {
+    -webkit-filter: drop-shadow(5px 5px 0 white)
+        drop-shadow(-5px -5px 0 white);
+    filter: drop-shadow(5px 5px 0 white) 
+        drop-shadow(-5px -5px 0 white);
+}
+
+
+.game-info__author-info__author-photo {
+    width: 100px;
+    place-content: center;
+}
+
+.stats__time-counter__countdown, .stats__score-counter__score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 6px;
+    border-style: solid;
+    
+    color: yellow;
+    font-size: 100px;
+}
+
+.stats__time-counter__countdown {
+    border-color: red;
+}
+
+.stats__score-counter__score {
+    border-color: blue;
+}
+
+.stats__time-counter__counter-title, .stats__score-counter__counter-title {
+    text-align: center;
+    font-size: 36px;
+}
+
+.wobble:hover {
+    -webkit-animation-name: wobble;
+    animation-name: wobble;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes wobble {
+    0% {
+    -webkit-transform: none;
+    transform: none;
+    }
+    75% {
+        transform: scale(10,1) rotate(0)skew(0,0) translate(0,0); 
+        -webkit-transform: scale(10,1) rotate(0)skew(0,0) translate(0,0); 
+        -moz-transform: scale(10,1) rotate(0)skew(0,0) translate(0,0); 
+        transform-origin: 50% 50%; 
+    }
+    100% {
+    -webkit-transform: none;
+    transform: none;
+    }
+    }
+    @keyframes wobble {
+    0% {
+    -webkit-transform: none;
+    transform: none;
+    }
+    75% {
+        transform: scale(10,1) rotate(0)skew(0,0) translate(0,0); 
+        -webkit-transform: scale(10,1) rotate(0)skew(0,0) translate(0,0); 
+        -moz-transform: scale(10,1) rotate(0)skew(0,0) translate(0,0); 
+        transform-origin: 50% 50%; 
+    }
+    100% {
+    -webkit-transform: none;
+    transform: none;
+    }
+}
+
+.shake-horizontal {
+	-webkit-animation: shake-horizontal 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite reverse both;
+	        animation: shake-horizontal 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite reverse both;
+
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2021-11-6 17:31:20
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation shake-horizontal
+ * ----------------------------------------
+ */
+ @-webkit-keyframes shake-horizontal {
+    0%,
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+    80% {
+      -webkit-transform: translateX(8px);
+              transform: translateX(8px);
+    }
+    90% {
+      -webkit-transform: translateX(-8px);
+              transform: translateX(-8px);
+    }
+  }
+  @keyframes shake-horizontal {
+    0%,
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+    80% {
+      -webkit-transform: translateX(8px);
+              transform: translateX(8px);
+    }
+    90% {
+      -webkit-transform: translateX(-8px);
+              transform: translateX(-8px);
+    }
+  }
